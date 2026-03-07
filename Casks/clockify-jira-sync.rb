@@ -1,6 +1,6 @@
 cask "clockify-jira-sync" do
-  version "1.6.2"
-  sha256 "6d2a73eb528aacdc64b5a31a305f97c435b43dc8008786f5fffd25f3e6b80155"
+  version "1.7.0"
+  sha256 "f5c815a87b2c6b505613a434624f17fdffbebb475c242c84704133a09fb03d1f"
 
   url "https://github.com/emmesbef/clockify-jira-sync/releases/download/v#{version}/clockify-jira-sync-v#{version}-macos-universal.zip"
   name "Clockify Jira Sync"
