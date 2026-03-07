@@ -1,6 +1,6 @@
 cask "clockify-jira-sync" do
-  version "1.3.2"
-  sha256 "2156cd143a0bb3609d6834fed5e28e337305e9d1b08ece2f18077ae49124b85c"
+  version "1.4.3"
+  sha256 "3554622f3a81ff68550f58ab795b554352f5e13e835a2bf58552c9287362fc3f"
 
   url "https://github.com/emmesbef/clockify-jira-sync/releases/download/v#{version}/clockify-jira-sync-v#{version}-macos-universal.zip"
   name "Clockify Jira Sync"
@@ -16,7 +16,7 @@ cask "clockify-jira-sync" do
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/clockify-jira-sync.app"]
+         args: ["-cr", "#{appdir}/clockify-jira-sync.app"]
   end
 
   zap trash: [
