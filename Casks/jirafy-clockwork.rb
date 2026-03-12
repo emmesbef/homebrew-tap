@@ -2,21 +2,21 @@ cask "jirafy-clockwork" do
   version :latest
   sha256 :no_check
 
-  # Tracks the latest successful dist-latest artifact built in GitLab CI.
-  url "https://gitlab.com/level-87/clockify-jira-sync/-/jobs/artifacts/dist-latest/raw/release-assets/jirafy-clockwork-macos-universal.zip?job=release_cross_platform"
+  # Points to the latest signed macOS bundle committed for Homebrew distribution.
+  url "https://gitlab.com/level-87/clockify-jira-sync/-/raw/main/downloads/jirafy-clockwork-macos-universal.zip"
   name "JiraFy Clockwork"
   desc "Desktop app to sync Clockify time entries with Jira worklogs"
   homepage "https://level-87.gitlab.io/"
 
   livecheck do
-    skip "Cask follows the latest dist-latest artifact."
+    skip "Cask follows the latest published download bundle."
   end
 
-  app "jirafy-clockwork.app"
+  app "JiraFy Clockwork.app"
 
   postflight do
     system_command "/usr/bin/xattr",
-         args: ["-cr", "#{appdir}/jirafy-clockwork.app"]
+         args: ["-cr", "#{appdir}/JiraFy Clockwork.app"]
   end
 
   zap trash: [
