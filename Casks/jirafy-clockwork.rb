@@ -1,14 +1,15 @@
 cask "jirafy-clockwork" do
-  version :latest
-  sha256 :no_check
+  version "1.10.8"
+  sha256 "17d1a08acc518d6c35fce89a3177885e8195102049bde0929790a4cad07cbc9c"
 
-  url "https://gitlab.com/level-87/clockify-jira-sync/-/releases/permalink/latest/downloads/jirafy-clockwork-macos-universal.zip"
+  # Uses a verified public GitLab artifact until release permalink publishing is fully stable.
+  url "https://gitlab.com/level-87/clockify-jira-sync/-/jobs/13472161702/artifacts/raw/release-assets/jirafy-clockwork-v#{version}-macos-universal.zip"
   name "JiraFy Clockwork"
   desc "Desktop app to sync Clockify time entries with Jira worklogs"
   homepage "https://level-87.gitlab.io/"
 
   livecheck do
-    skip "The cask follows the latest GitLab release permalink."
+    skip "Version bumps are managed explicitly alongside release publishing."
   end
 
   app "jirafy-clockwork.app"
