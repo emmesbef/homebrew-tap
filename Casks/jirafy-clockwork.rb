@@ -1,8 +1,8 @@
 cask "jirafy-clockwork" do
-  version "1.10.17"
-  sha256 "543f9f4c594739e0aed168dccae99cb797a90be313aa8770b8e5edb20a3c472f"
+  version "1.10.18"
+  sha256 "16649a16f7090ef3ffda68bc6009c36c111045e140006ad150be92c769706916"
 
-  url "https://gitlab.com/level-87/clockify-jira-sync/-/releases/v#{version}/downloads/jirafy-clockwork-v#{version}-macos-universal.zip"
+  url "https://gitlab.com/level-87/clockify-jira-sync/-/jobs/artifacts/v#{version}/raw/release-assets/jirafy-clockwork-v#{version}-macos-universal.zip?job=release_cross_platform"
   name "JiraFy Clockwork"
   desc "Desktop app to sync Clockify time entries with Jira worklogs"
   homepage "https://level-87.gitlab.io/"
