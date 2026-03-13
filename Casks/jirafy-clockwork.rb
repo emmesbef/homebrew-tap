@@ -1,22 +1,17 @@
 cask "jirafy-clockwork" do
-  version :latest
-  sha256 :no_check
+  version "1.10.16"
+  sha256 "a47d43abad0c71e7a6c3460f3be2d2a15b68b1d5c77159e60bd11ab34d16cdba"
 
-  # Points to the latest signed macOS bundle committed for Homebrew distribution.
-  url "https://gitlab.com/level-87/clockify-jira-sync/-/raw/main/downloads/jirafy-clockwork-macos-universal.zip"
+  url "https://gitlab.com/level-87/clockify-jira-sync/-/packages/generic/jirafy-clockwork/v#{version}/jirafy-clockwork-v#{version}-macos-universal.zip"
   name "JiraFy Clockwork"
   desc "Desktop app to sync Clockify time entries with Jira worklogs"
   homepage "https://level-87.gitlab.io/"
-
-  livecheck do
-    skip "Cask follows the latest published download bundle."
-  end
 
   app "JiraFy Clockwork.app"
 
   postflight do
     system_command "/usr/bin/xattr",
-         args: ["-cr", "#{appdir}/JiraFy Clockwork.app"]
+                   args: ["-cr", "#{appdir}/JiraFy Clockwork.app"]
   end
 
   zap trash: [
