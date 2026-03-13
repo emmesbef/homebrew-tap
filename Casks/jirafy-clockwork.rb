@@ -1,17 +1,17 @@
 cask "jirafy-clockwork" do
-  version "1.10.22"
-  sha256 "b02106b8e56ce7d89fba9193cb856db80d7ec1dfb872cb0e7815c920db60955a"
+  version "1.10.23"
+  sha256 "d99c7fed67a2fb58e20e440ee08b1d58d586ccae0d586db49203761a4713a913"
 
   url "https://gitlab.com/level-87/clockify-jira-sync/-/raw/main/downloads/jirafy-clockwork-v#{version}-macos-universal.zip"
   name "JiraFy Clockwork"
   desc "Desktop app to sync Clockify time entries with Jira worklogs"
   homepage "https://level-87.gitlab.io/"
 
-  app "jirafy-clockwork.app"
+  app "JiraFy Clockwork.app"
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/jirafy-clockwork.app"]
+                   args: ["-cr", "#{appdir}/JiraFy Clockwork.app"]
   end
 
   zap trash: [
