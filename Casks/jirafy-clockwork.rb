@@ -1,6 +1,6 @@
 cask "jirafy-clockwork" do
-  version "1.10.24"
-  sha256 "8d806d6cbb677796ac14afadd77ab455de0c2a275393f198b1d7420fd824fff4"
+  version "1.11.0"
+  sha256 "7c7a3e35337fcf6f0a8732286696a5dd0f91d97ad26eb0737c1b29e48c79c00a"
 
   url "https://gitlab.com/level-87/clockify-jira-sync/-/raw/main/downloads/jirafy-clockwork-v#{version}-macos-universal.zip"
   name "JiraFy Clockwork"
